@@ -1,20 +1,18 @@
-title: My personal blog - Adam Neilson
-email: your-email@domain.com
+title: 我的个人博客 - 张先生张童鞋
+email: mikcczhang@qq.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  张童鞋张先生的个人博客
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://github.com/deleteLater/deleteLater.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
-author: Adam Neilson # add your name
+author: Zhang TongXie # add your name
 author-pic: adam-face.jpg
-about-author: My name is Adam Neilson. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 2 years.
+about-author: 软件工程专业在读学生.
 
 # Contact links
-email: # Add your Email address
+email: mikcczhang@qq.com # Add your Email address
 phone: # Add your Phone number
 website: github.com/deleteLater/deleteLater.github.io # Add your website, do not add http://
 linkedin: # Add your Linkedin handle
@@ -31,7 +29,7 @@ mailchimp: # Add your MailChimp form identifier.
 discus_identifier: mr-brown # Add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+# analytics: # Google Analytics
 
 # Paginate
 paginate: 6
