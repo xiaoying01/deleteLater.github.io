@@ -1,14 +1,14 @@
 title: 张先生张童鞋的个人博客
 email: mikcczhang@qq.com
 description: > # this means to ignore newlines until "baseurl:"
-  张童鞋的技术博客，专门用来给人看的
+  张童鞋的技术博客。这一项都是命运石之门的选择,El psy congroo.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://github.com/deleteLater/deleteLater.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
 author: Zhang TongXie # add your name
-author-pic: adam-face.jpg
+author-pic: zhang.jpg
 about-author: 软件工程专业在读学生.
 
 # Contact links
@@ -17,7 +17,7 @@ phone: # Add your Phone number
 website: github.com/deleteLater # Add your website, do not add http://
 linkedin: # Add your Linkedin handle
 github: deleteLater # Add your Github handle
-twitter: '@artemsheludko_' # Add your Twitter handle
+twitter:  # Add your Twitter handle
 facebook: # Add your Facebook handle
 instagram: # Add your Instagram handle
 pinterest: # Add your Pinterest handle
