@@ -1,7 +1,7 @@
-title: 我的个人博客 - 张先生张童鞋
+title: 张先生张童鞋的个人博客
 email: mikcczhang@qq.com
 description: > # this means to ignore newlines until "baseurl:"
-  张童鞋张先生的个人博客
+  张童鞋的技术博客，专门用来给人看的
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://github.com/deleteLater/deleteLater.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -14,7 +14,7 @@ about-author: 软件工程专业在读学生.
 # Contact links
 email: mikcczhang@qq.com # Add your Email address
 phone: # Add your Phone number
-website: github.com/deleteLater/deleteLater.github.io # Add your website, do not add http://
+website: github.com/deleteLater # Add your website, do not add http://
 linkedin: # Add your Linkedin handle
 github: deleteLater # Add your Github handle
 twitter: '@artemsheludko_' # Add your Twitter handle
@@ -23,13 +23,13 @@ instagram: # Add your Instagram handle
 pinterest: # Add your Pinterest handle
 
 # Newsletter
-mailchimp: # Add your MailChimp form identifier.
+# mailchimp: # Add your MailChimp form identifier.
 
 # Disqus
-discus_identifier: mr-brown # Add your discus identifier
+discus_identifier: https-github-com-deletelater-deletelater-github-io # Add your discus identifier
 
 # Tracker
-# analytics: # Google Analytics
+analytics: UA-125562196-1 # Google Analytics
 
 # Paginate
 paginate: 6
