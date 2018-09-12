@@ -13,8 +13,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-<pre><code class="csharp">
-namespace HelloWolrd
+<pre><code class="csharp">namespace HelloWolrd
 {
     public class HelloWolrd
     {
