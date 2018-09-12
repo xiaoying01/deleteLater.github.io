@@ -3,7 +3,7 @@ email: mikcczhang@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   张童鞋的技术博客。这一项都是命运石之门的选择,El psy congroo.
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://github.com/deleteLater/deleteLater.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
