@@ -23,10 +23,10 @@ namespace HelloWolrd
             // ctor
         }
 
-        /// &lt;summary&rt;
+        /// &lt;summary&gt;
         /// Introduce yourself to other
-        /// &lt;/summary&rt;
-        /// &lt;param name="yourName"&rt;your name&lt;/param&rt;
+        /// &lt;/summary&gt;
+        /// &lt;param name="yourName"&gt;your name&lt;/param&gt;
         public void SayHello(string yourName)
         {
             System.Console.WriteLine($"Hello,everyone, My name is {yourName}");
