@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello,Wolrd
-date: 2018-09-12 10:09:879 +0800
+date: 2018-09-12 10:09:54 +0800
 description: Where i start my bolg life. # Add post description (optional)
 img: hello-world.jpg # Add image post (optional)
 tags: [Blog, StartPoint]
