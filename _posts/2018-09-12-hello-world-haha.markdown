@@ -11,7 +11,7 @@ You’ll find this post in your _**_posts**_ directory. Go ahead and edit it and
 
 To add new posts, simply add a file in the _**_posts**_ directory that follows the convention _YYYY-MM-DD-name-of-post.ext_ and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
+Jekyll also offers powerful support for code snippets,but here i want use highlight.js to render my code:
 
 <pre><code class="csharp">namespace HelloWolrd
 {
