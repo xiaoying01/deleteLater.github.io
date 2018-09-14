@@ -7,16 +7,14 @@ img: sparclogo.jpg # Add image post (optional)
 tags: [Blog, Tech, Assembly]
 author: Zhang # Add name author (optional)
 ---
-Registers
-------
+## Registers
     - First 6 integer arguments passed in %o0 – %o5
         - Other or additional arguments passed on stack
     - Return value in %i0
     - Return address in %i7，but need to add 8
 
 
-Basic sparc instruction set
-------
+## Basic sparc instruction set
 | Instruction | Meaning |
 |:----------------|:--------------------|
 | ld addr, %reg   | 从addr中取32位字数据放人reg   |
@@ -24,16 +22,11 @@ Basic sparc instruction set
 | save %sp, -imm, %sp | 分配一个大小为imm的内存堆栈 |
 | restore %sp, imm, %sp | 与save相反,释放大小为imm内存堆栈 |
 
-Resource Reference
-------
-[Sparc V9 Brief Introduction (pdf)](brief_introduction)<br>
-[Sparc Overview (pdf)](sparc_overview)<br>
-[Sparc Instruction Set (xls)](sparc_instruction_set_xls)<br>
+## Resource Reference
+[Sparc V9 (pdf)]({{site.basurl}}/assets/doc/sparcV9.pdf)<br>
+[Sparc V9 Brief Introduction (pdf)]({{site.basurl}}/assets/doc/sparcV9_brief_introduction.pdf)<br>
+[Sparc Overview (pdf)]({{site.basurl}}/assets/doc/spark_overview.pdf)<br>
+[Sparc Instruction Set (xls)]({{site.basurl}}/assets/doc/sparc_instruction_set.xls)<br>
 
-![SteinsGate_Christina](christina)
+![SteinsGate_Christina]({{site.baseurl}}/assets/img/SteinsGate_Christina.jpg)
 
-[christina]: {{site.baseurl}}/assets/img/SteinsGate_Christina.jpg
-[oracle-sparcassembly-docs]: https://docs.oracle.com/cd/E18752_01/html/816-1681/toc.html
-[brief_introduction]: {{site.basurl}}/assets/doc/sparcV9_brief_introduction.pdf
-[sparc_overview]: {{site.basurl}}/assets/doc/spark_overview.pdf
-[sparc_instruction_set_xls]: {{site.basurl}}/assets/doc/sparc_instruction_set.xls
