@@ -9,10 +9,10 @@ author: Zhang # Add name author (optional)
 ---
 Basic sparc instruction set
 
-Instruction   | Meaning
-------------- | -------------------------
-ld addr, %reg | 从addr中取32位字数据放人reg
-st %reg, addr | 把reg中的32位字数据保存到addr
+| Instruction | Meaning |
+|-------|--------|
+| ld addr, %reg | 从addr中取32位字数据放人reg |
+| st %reg, addr | 把reg中的32位字数据保存到addr |
 
 > Please visit [oracle-sparcassembly-manual][oracle-sparcassembly-docs] for more details.
 
