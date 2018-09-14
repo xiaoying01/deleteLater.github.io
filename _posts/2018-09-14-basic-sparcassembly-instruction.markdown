@@ -14,7 +14,8 @@ author: Zhang # Add name author (optional)
     - Return address in %i7，but need to add 8
 
 
-## Basic sparc instruction set
+<h2>Basic sparc instruction set</h2>
+
 | Instruction | Meaning |
 |:----------------|:--------------------|
 | ld addr, %reg   | 从addr中取32位字数据放人reg   |
