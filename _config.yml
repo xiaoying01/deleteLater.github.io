@@ -43,5 +43,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+sass:
+  sass_dir: assets/css/sass
+
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]

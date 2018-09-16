@@ -1,3 +1,5 @@
+---
+---
 @import "variables";
 @import "syntax";
 @import "tools/normalize";
@@ -114,13 +116,7 @@ pre {
   clear: both;
 }
 
-.mbtablestyle {
-  border-collapse: collapse;
 
-  > table, td, th {
-      border: 1px solid black;
-  }
-}
 
 /* = = = = = = = = = = Header Styles = = = = = = = = = = */
 @import "parts/header";
@@ -153,8 +149,15 @@ pre {
 /* = = = = = = = = = = Animate Styles = = = = = = = = = = */
 @import "parts/animate";
 
-/* = = = = = = = = = = Table Styles = = = = = = = = = = */
-@import "parts/table";
-
 /* = = = = = = = = = = Media = = = = = = = = = = */
-@import "media"
+@import "media";
+
+/* = = = = = = = = = = Bootstrap Fundation = = = = = = = = = = */
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+/* = = = = = = = = = = Bootstrap Tables = = = = = = = = = = */
+@import "bootstrap/tables";
+
+/* = = = = = = = = = = Bootstrap Panels = = = = = = = = = = */
+@import "bootstrap/panels";

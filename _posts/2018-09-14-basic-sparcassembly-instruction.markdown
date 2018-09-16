@@ -7,17 +7,26 @@ img: sparclogo.jpg # Add image post (optional)
 tags: [Blog, Tech, Assembly]
 author: Zhang # Add name author (optional)
 ---
-## Registers ##
-    - First 6 integer arguments passed in %o0 – %o5
-        - Other or additional arguments passed on stack
-    - %g0 reads as zero, writes ignored
-    - Put return value in %i0
-    - Return address in %i7，but need to add 8
-    - Stack Pointer in %sp, it points to current stack top
-    - Frame Pointer in %fp, it points to current stack buttom
 
+{::options parse_block_html="true" /}
+## Registers
+  ![Registers]({{site.baseurl}}/assets/img/sparc_regs.png)
 
-<h2>Instructions</h2>
+<div class="panel-info">
+![Tip]({{site.baseurl}}/assets/img/tip.png) Note
+{: .panel-heading}
+<div class="panel-body">
+  - First 6 integer arguments passed in %o0 – %o5
+  - Other or additional arguments passed on stack
+  - %g0 reads as zero, writes ignored
+  - Put return value in %i0
+  - Return address in %i7，but need to add 8
+  - Stack Pointer in %sp, it points to current stack top
+  - Frame Pointer in %fp, it points to current stack buttom
+</div>
+</div>
+
+## Instructions
 
 | Instruction | Meaning |
 |:----------------|:--------------------|
@@ -25,7 +34,7 @@ author: Zhang # Add name author (optional)
 | st %reg, addr   | 把reg中的32位字数据存储到addr   |
 | sethi const22,%reg | 设置%reg的高22位 |
 | %hi(X) | 取X的高22位 |
-{:.mbtablestyle}
+{:.table .table-striped}
 
 | Synthetic Instruction | SPARC-V9 instruction(s) | Meaning |
 |:----------------|:--------------------|:--------------------|
@@ -34,6 +43,7 @@ author: Zhang # Add name author (optional)
 | clr [addr] | st %g0,[address] | [addr] = 0x0 |
 | clr %reg | or %g0,%g0,%reg | [%reg] = 0x0 |
 | cmp %reg1, %reg2/const, %g0 | subcc %reg1,%reg2/const,%g0 | %reg1 - %reg2/const = %g0 |
+{:.table .table-striped}
 
 ## Resource
 [Knowledge Prepare (pdf)]({{site.basurl}}/assets/doc/prepare_knowledge.pdf)<br>
@@ -47,4 +57,4 @@ author: Zhang # Add name author (optional)
 [WIKI Online Book - SPARC Assembly](https://en.wikibooks.org/wiki/SPARC_Assembly)<br>
 [Sparc V9 (pdf)]({{site.basurl}}/assets/doc/sparcV9.pdf)<br>
 
-![steinsgate]({{site.baseurl}}/assets/img/steinsgate.jpeg)
+
