@@ -7,14 +7,13 @@ img: sparclogo.jpg # Add image post (optional)
 tags: [Blog, Tech, Assembly]
 author: Zhang # Add name author (optional)
 ---
-
-{::options parse_block_html="true" /}
 ## Registers
   ![Registers]({{site.baseurl}}/assets/img/sparc_regs.png)
 
-<div class="panel-info">
-![Tip]({{site.baseurl}}/assets/img/tip.png) Note
-{: .panel-heading}
+{::options parse_block_html="true" /}
+<div class="panel panel-default">
+<div class="panel-heading">![Tip]({{site.baseurl}}/assets/img/tip.png)**NOTE**
+</div>
 <div class="panel-body">
   - First 6 integer arguments passed in %o0 – %o5
   - Other or additional arguments passed on stack
