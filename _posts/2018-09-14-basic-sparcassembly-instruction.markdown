@@ -25,6 +25,7 @@ author: Zhang # Add name author (optional)
 | st %reg, addr   | 把reg中的32位字数据存储到addr   |
 | sethi const22,%reg | 设置%reg的高22位 |
 | %hi(X) | 取X的高22位 |
+{:.mbtablestyle}
 
 | Synthetic Instruction | SPARC-V9 instruction(s) | Meaning |
 |:----------------|:--------------------|:--------------------|
