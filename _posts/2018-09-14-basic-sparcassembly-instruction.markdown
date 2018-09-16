@@ -46,4 +46,4 @@ author: Zhang # Add name author (optional)
 [WIKI Online Book - SPARC Assembly](https://en.wikibooks.org/wiki/SPARC_Assembly)<br>
 [Sparc V9 (pdf)]({{site.basurl}}/assets/doc/sparcV9.pdf)<br>
 
-![steinsgate]({{site.baseurl}}/assets/img/steinsgate.jpg)
+![steinsgate]({{site.baseurl}}/assets/img/steinsgate.jpeg)
