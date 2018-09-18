@@ -15,7 +15,8 @@ author: Zhang # Add name author (optional)
 <div class="panel-heading">![Tip]({{site.baseurl}}/assets/img/tip.png)**NOTE**
 </div>
 <div class="panel-body">
-  - First 6 integer arguments passed in %o0 – %o5
+  - First 6 arguments passed in %o0 – %o5
+    - the seventh argument starts from %sp+0x5c(for 32bit) or %sp+0x8af(for 64bit) see [here](https://docs.oracle.com/cd/E36784_01/html/E36858/gmado.html) for more
   - Other or additional arguments passed on stack
   - %g0 reads as zero, writes ignored
   - Put return value in %i0
@@ -42,6 +43,8 @@ author: Zhang # Add name author (optional)
 | clr [addr] | st %g0,[address] | [addr] = 0x0 |
 | clr %reg | or %g0,%g0,%reg | [%reg] = 0x0 |
 | cmp %reg1, %reg2/const, %g0 | subcc %reg1,%reg2/const,%g0 | %reg1 - %reg2/const = %g0 |
+| clrx [address] | stx %g0, [address] | clear extended word |
+| setuw/set value,%reg |Sparc V9 (pdf) P320 | set unsigned word |
 {:.table .table-striped}
 
 ## Resource
