@@ -9,6 +9,8 @@ author: Zhang # Add name author (optional)
 ---
 ## Sparc
 &nbsp;&nbsp;Sparc,意为可拓展处理器架构(Scalable Processor Architecture),是RISC(精简指令集)微处理架构之一。具有线性的32位地址空间,所有指令都是32位宽度。
+
+我要做点更改！！！
 更多待补充...
 
 ## Registers
