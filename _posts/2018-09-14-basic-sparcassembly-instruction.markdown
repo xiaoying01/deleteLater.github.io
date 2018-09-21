@@ -7,28 +7,34 @@ img: sparclogo.jpg # Add image post (optional)
 tags: [Blog, Tech, Assembly]
 author: Zhang # Add name author (optional)
 ---
-## Registers
-  ![Registers]({{site.baseurl}}/assets/img/sparc_regs.png)
+## Sparc
+&nbsp;&nbsp;Sparc,意为可拓展处理器架构(Scalable Processor Architecture),是RISC(精简指令集)微处理架构之一。
+更多待补充...
 
+## Registers
+  ![Registers]({{site.baseurl}}/assets/img/sparc_integer_regs.png)
+  
 {::options parse_block_html="true" /}
 <div class="panel panel-default">
-<div class="panel-heading">![Tip]({{site.baseurl}}/assets/img/tip.png)**NOTE**
+<div class="panel-heading">![Tip]({{site.baseurl}}/assets/img/tip.png)&nbsp;&nbsp;&nbsp;&nbsp;**NOTE**
 </div>
 <div class="panel-body">
-  - First 6 arguments passed in %o0 – %o5
-    - the seventh argument starts from %sp+0x5c(for 32bit) or %sp+0x8af(for 64bit) see [here](https://docs.oracle.com/cd/E36784_01/html/E36858/gmado.html) for more
-  - Other or additional arguments passed on stack
-  - %g0 reads as zero, writes ignored
-  - Put return value in %i0
-  - Return address in %i7，but need to add 8
-  - Stack Pointer in %sp, it points to current stack top
-  - Frame Pointer in %fp, it points to current stack buttom
+  - 函数的前6个参数通过 寄存器o0~05来传递,第七个参数及以后的参数通过栈空间传递
+    - 第七个参数开始于 %sp+0x5c(32位环境) 或者 %sp+0x8af(64位环境) 参阅[参数传递][sparc_args_pass]
+  - 有关寄存器窗口,简要参阅[寄存器窗口][sparc_register_windows]
+  - 子程序一般把返回值放在i0,因为窗口重叠,相应的调用者通过o0获取该返回值,请务必参阅[Sparc子程序调用分析][sparc_subroutine_analysis]
+  - 子程序返回地址在 %i7+8
+  - %sp,看作栈顶指针
+  - %fp,看作栈底指针
 </div>
 </div>
+
+## Stack Frame
+  ![Stack Frame]({{site.baseurl}}/assets/img/stack_frame.png)
 
 ## Instructions
 
-| Instruction | Meaning |
+| 指令 | 意思 |
 |:----------------|:--------------------|
 | ld addr, %reg   | 从addr中加载一个字的数据(32位)放入reg   |
 | st %reg, addr   | 把reg中的32位字数据存储到addr   |
@@ -36,27 +42,28 @@ author: Zhang # Add name author (optional)
 | %hi(X) | 取X的高22位 |
 {:.table .table-striped}
 
-| Synthetic Instruction | SPARC-V9 instruction(s) | Meaning |
+| 合成指令 | 对应的实际指令 | 意思 |
 |:----------------|:--------------------|:--------------------|
-| save/restore |  save/restore %g0, %g0, %g0 | 用来操控寄存器窗口,详细见[Save and Restore](http://www.mathcs.emory.edu/~cheung/Courses/255/Syllabus/8-SPARC/save+restore.html) |
+| save/restore |  save/restore %g0, %g0, %g0 | 用来操控寄存器窗口,请务必参阅[Save and Restore](http://www.mathcs.emory.edu/~cheung/Courses/255/Syllabus/8-SPARC/save+restore.html) |
 | ret | jmpl %i7+8, %g0 | 从子程序返回 |
-| clr [addr] | st %g0,[address] | [addr] = 0x0 |
-| clr %reg | or %g0,%g0,%reg | [%reg] = 0x0 |
-| cmp %reg1, %reg2/const, %g0 | subcc %reg1,%reg2/const,%g0 | %reg1 - %reg2/const = %g0 |
-| clrx [address] | stx %g0, [address] | clear extended word |
-| setuw/set value,%reg |Sparc V9 (pdf) P320 | set unsigned word |
+| clr [addr] | st %g0,[address] | 清空addr所放的值 |
+| clr %reg | or %g0,%g0,%reg | 清空reg里所放的值 |
+| cmp %reg1, %reg2/const, %g0 | subcc %reg1,%reg2/const,%g0 | 看这个等式,%reg1 - %reg2/const = %g0 |
+| clrx [address] | stx %g0, [address] | 清空一个拓展字(8字节) |
+| setuw/set value,%reg |Sparc V9 (pdf) P320 | 给reg设字(4字节)值 |
 {:.table .table-striped}
 
 ## Resource
-[Knowledge Prepare (pdf)]({{site.basurl}}/assets/doc/prepare_knowledge.pdf)<br>
-[Sparc V9 Brief Introduction (pdf)]({{site.basurl}}/assets/doc/sparcV9_brief_introduction.pdf)<br>
-[Sparc Overview (pdf)]({{site.basurl}}/assets/doc/sparc_overview.pdf)<br>
-[Sparc Basic Instruction Set](http://moss.csc.ncsu.edu/~mueller/codeopt/codeopt00/notes/sparc.html)
-[Sparc Instruction Set (xls)]({{site.basurl}}/assets/doc/sparc_instruction_set.xls)<br>
-[Sparc Subroutine Analysis](http://blog.sina.com.cn/s/blog_4b46cfa801011eiz.html)
+[知识准备 (pdf)]({{site.basurl}}/assets/doc/prepare_knowledge.pdf)<br>
+[简要概述 (pdf)]({{site.basurl}}/assets/doc/sparcV9_brief_introduction.pdf)<br>
+[架构概述 (pdf)]({{site.basurl}}/assets/doc/sparc_overview.pdf)<br>
+[基本指令](http://moss.csc.ncsu.edu/~mueller/codeopt/codeopt00/notes/sparc.html)<br>
+[指令集 (xls)]({{site.basurl}}/assets/doc/sparc_instruction_set.xls)<br>
 
 ## More
-[WIKI Online Book - SPARC Assembly](https://en.wikibooks.org/wiki/SPARC_Assembly)<br>
-[Sparc V9 (pdf)]({{site.basurl}}/assets/doc/sparcV9.pdf)<br>
+[Sparc汇编 (Wiki书籍)](https://en.wikibooks.org/wiki/SPARC_Assembly)<br>
+[Sparc完整介绍 (pdf)]({{site.basurl}}/assets/doc/sparcV9.pdf)
 
-
+[sparc_subroutine_analysis]: http://blog.sina.com.cn/s/blog_4b46cfa801011eiz.html
+[sparc_register_windows]: https://en.wikipedia.org/wiki/Register_window
+[sparc_args_pass]: https://docs.oracle.com/cd/E36784_01/html/E36858/gmado.html
