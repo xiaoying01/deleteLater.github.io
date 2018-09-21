@@ -18,6 +18,7 @@ The post page would look like this:
 
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](http://fontawesome.io/)
+- [GitTalk](https://github.com/gitalk)
 - [Disqus](https://disqus.com/)
 - [MailChimp](https://mailchimp.com/)
 - [Analytics](https://analytics.google.com/analytics/web/)

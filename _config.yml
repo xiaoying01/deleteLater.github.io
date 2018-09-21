@@ -28,6 +28,14 @@ pinterest: # Add your Pinterest handle
 # Disqus
 discus_identifier: https-github-com-deletelater-deletelater-github-io # Add your discus identifier
 
+# GitTalk
+clientID: 16d5b017b4caee179750
+clientSecret: 4d6e2b7035092d4b6e8522a6ddda9d0974181bfc
+repo: deletelater.github.io
+owner: deleteLater
+admin: deleteLater
+distractionFreeMode: true
+
 # Tracker
 analytics: UA-125562196-1 # Google Analytics
 
